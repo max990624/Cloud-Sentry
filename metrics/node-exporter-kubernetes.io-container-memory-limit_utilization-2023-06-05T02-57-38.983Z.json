@@ -1,0 +1,6 @@
+{
+  "podName": "loadgenerator-6457668dd6-gt2xx",
+  "containerName": "node-exporter",
+  "metricType": "kubernetes.io/container/memory/limit_utilization",
+  "metrics": []
+}

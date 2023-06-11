@@ -1,0 +1,17 @@
+{
+  "name": "google-cloud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "google_cloud_api_test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/monitoring": "^3.0.4",
+    "@kubernetes/client-node": "^0.18.1",
+    "axios": "^1.4.0",
+    "express": "^4.18.2"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "podName": "balancereader-84c5d95544-jhzvl",
+  "containerName": "node-exporter",
+  "metricType": "kubernetes.io/container/memory/limit_utilization",
+  "metrics": []
+}

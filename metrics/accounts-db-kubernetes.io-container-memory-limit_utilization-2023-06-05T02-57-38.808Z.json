@@ -1,0 +1,6 @@
+{
+  "podName": "accounts-db-0",
+  "containerName": "accounts-db",
+  "metricType": "kubernetes.io/container/memory/limit_utilization",
+  "metrics": []
+}

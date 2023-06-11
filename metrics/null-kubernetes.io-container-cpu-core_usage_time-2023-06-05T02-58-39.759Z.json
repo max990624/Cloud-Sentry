@@ -1,0 +1,6 @@
+{
+  "podName": "balancereader-84c5d95544-jhzvl",
+  "containerName": null,
+  "metricType": "kubernetes.io/container/cpu/core_usage_time",
+  "metrics": []
+}

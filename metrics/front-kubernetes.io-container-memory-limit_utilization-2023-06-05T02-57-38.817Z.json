@@ -1,0 +1,6 @@
+{
+  "podName": "frontend-cb4f9cd57-jx89k",
+  "containerName": "front",
+  "metricType": "kubernetes.io/container/memory/limit_utilization",
+  "metrics": []
+}
