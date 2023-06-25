@@ -47,7 +47,7 @@ async function collectAndSendMetrics() {
 
     // 선택된 MetricSender의 전략을 사용하여 메트릭 보내기
     const containerMetrics = await Promise.all(containerNames.map(container => Promise.all(metricTypes.map(type => getMetric(container.podName, container.containerName, type)))));
-    const podMetrics = await Promise.all(podNames.map(podName => Promise.all(metricTypes.map(type => getMetric(podName, null, type)))));
+    // const podMetrics = await Promise.all(podNames.map(podName => Promise.all(metricTypes.map(type => getMetric(podName, null, type)))));
     const nodeMetrics = await Promise.all(nodeNames.map(nodeName => Promise.all(metricTypes.map(type => getMetric(null, nodeName, type)))));
   } catch (error) {
     console.error(`메트릭을 수집하고 전송하는 동안 오류가 발생했습니다: ${error}`);

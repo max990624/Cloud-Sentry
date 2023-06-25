@@ -8,7 +8,7 @@ const k8sApi = kc.makeApiClient(k8s.CoreV1Api);
 // 컨테이너 이름 가져오기
 async function getContainers() {
     try {
-      const pods = await k8sApi.listNamespacedPod('monitor');
+      const pods = await k8sApi.listNamespacedPod('monitor'); // monitor namespace
       const containers = [];
   
       for (const pod of pods.body.items) {

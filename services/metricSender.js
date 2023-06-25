@@ -34,5 +34,4 @@ MetricSender (abstract class)
     │
     └───ApiMetricSender (subclass)
         └───sendToDestination(data) (implementation for sending to an API)
-
 */
