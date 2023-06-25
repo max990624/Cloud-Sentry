@@ -7,7 +7,7 @@ const metricSender = new FileMetricSender();
 
 // 모니터링 클라이언트 생성
 const client = new monitoring.MetricServiceClient({
-  keyFilename: 'cloud-sentry-386420-ed4d3bd8e36d.json'
+  keyFilename: 'cloud-sentry-386420-ed4d3bd8e36d.json' // .env.keyFilename
 });
 
 // 프로젝트 ID 설정
@@ -15,6 +15,7 @@ const projectId = process.env.GOOGLE_CLOUD_PROJECT_ID;
 
 //
 async function getMetric(podName, containerName, metricType, retryCount = 0) {
+  // 시간을 보기 좋게 변경예정 new Date().getTime() - 60000, startTime.getTime() + 60000 통일하기
   const startTime = new Date(new Date().getTime() - 60000); // 현재 시간으로부터 2분(120000 밀리초) 전을 시작 시간으로 설정
   const endTime = new Date(startTime.getTime() + 60000); // 시작 시간으로부터 1분(60000 밀리초) 후를 종료 시간으로 설정  
 
