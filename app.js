@@ -35,18 +35,14 @@ async function collectAndSendMetrics() {
       // Container metrics
       "kubernetes.io/container/cpu/core_usage_time",
       "kubernetes.io/container/cpu/limit_utilization",
-      "kubernetes.io/container/memory/usage_bytes",
+      "kubernetes.io/container/cpu/request_utilization",
       "kubernetes.io/container/memory/limit_utilization",
-      // Pod metrics
-      "kubernetes.io/pod/network/received_bytes_count",
-      "kubernetes.io/pod/network/sent_bytes_count",
+      "kubernetes.io/container/memory/request_utilization",
+      "kubernetes.io/container/memory/used_bytes",
+      "kubernetes.io/container/restart_count",
       // Node metrics
-      "kubernetes.io/node/cpu/core_usage_time",
-      "kubernetes.io/node/cpu/allocatable_utilization",
-      "kubernetes.io/node/memory/used_bytes",
-      "kubernetes.io/node/memory/allocatable_utilization",
-      "kubernetes.io/node/network/received_bytes_count ",
-      "kubernetes.io/node/network/sent_bytes_count "
+      "kubernetes.io/node/network/received_bytes_count",
+      "kubernetes.io/node/node/network/sent_bytes_count"
     ];
 
     // 선택된 MetricSender의 전략을 사용하여 메트릭 보내기
