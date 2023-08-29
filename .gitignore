@@ -1,9 +1,11 @@
 monitoring/Cloud Sentry 서비스 계정.txt
-monitoring//cloud-sentry-386420-ed4d3bd8e36d.json
-monitoring//node_modules
-monitoring//.env
-monitoring//services/desktop.ini
-monitoring//services/implementations/desktop.ini
-monitoring//utils/desktop.ini
+monitoring/cloud-sentry-386420-ed4d3bd8e36d.json
+monitoring/node_modules
+monitoring/.env
+monitoring/services/desktop.ini
+monitoring/services/implementations/desktop.ini
+monitoring/utils/desktop.ini
 monitoring/desktop.ini
 monitoring/metrics/desktop.ini
+monitoring/desktop.ini
+desktop.ini
