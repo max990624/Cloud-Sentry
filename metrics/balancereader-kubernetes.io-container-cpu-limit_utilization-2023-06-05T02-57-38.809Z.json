@@ -1,6 +1,0 @@
-{
-  "podName": "balancereader-84c5d95544-jhzvl",
-  "containerName": "balancereader",
-  "metricType": "kubernetes.io/container/cpu/limit_utilization",
-  "metrics": []
-}

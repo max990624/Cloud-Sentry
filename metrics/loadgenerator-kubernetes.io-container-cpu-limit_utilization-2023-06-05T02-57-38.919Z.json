@@ -1,6 +1,0 @@
-{
-  "podName": "loadgenerator-6457668dd6-gt2xx",
-  "containerName": "loadgenerator",
-  "metricType": "kubernetes.io/container/cpu/limit_utilization",
-  "metrics": []
-}

@@ -1,6 +1,0 @@
-{
-  "podName": "ledgerwriter-6b47874795-5kxws",
-  "containerName": "node-exporter",
-  "metricType": "kubernetes.io/container/memory/limit_utilization",
-  "metrics": []
-}

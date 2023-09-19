@@ -1,6 +1,0 @@
-{
-  "podName": "ledgerwriter-6b47874795-5kxws",
-  "containerName": null,
-  "metricType": "kubernetes.io/container/cpu/core_usage_time",
-  "metrics": []
-}
