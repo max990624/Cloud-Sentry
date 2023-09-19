@@ -4,5 +4,6 @@
 /services/desktop.ini
 /services/implementations/desktop.ini
 /utils/desktop.ini
-desktop.ini
-metrics/desktop.ini
+/desktop.ini
+/metrics/desktop.ini
+/.DS_Store
