@@ -29,8 +29,10 @@ function createFilter(metricType, containerName, nodeName) {
 
 //
 async function getMetric(podName, containerName, nodeName, metricType, retryCount = 0) {
-  const startTime = new Date(new Date().getTime() - 600000); // 현재 시간으로부터 2분(120000 밀리초) 전을 시작 시간으로 설정
-  const endTime = new Date(startTime.getTime() + 60000); // 시작 시간으로부터 1분(60000 밀리초) 후를 종료 시간으로 설정
+  const setStartIntervalTimeInMS = 600000;
+  const setIntervalTimeInMs = 60000;
+  const startTime = new Date(new Date().getTime() - setStartIntervalTimeInMS); // 현재 시간으로부터 n밀리초 전을 시작 시간으로 설정
+  const endTime = new Date(startTime.getTime() + setIntervalTimeInMs); // 시작 시간으로부터 n밀리초 후를 종료 시간으로 설정
 
   let filter = createFilter(metricType, containerName, nodeName);
   let nameForLog= getMetricNameBasedOnType(metricType, containerName, nodeName);
