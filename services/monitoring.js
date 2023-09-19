@@ -1,27 +1,49 @@
 const monitoring = require('@google-cloud/monitoring');
 const MetricSender = require('./metricSender.js');
-const FileMetricSender = require('./fileMetricSender.js');
+const FileMetricSender = require('./implementations/fileMetricSender.js');
+const delay = require('../utils/delay.js');
+const { getMetricNameBasedOnType } = require('./identifyMetricSource.js')
 
 // MetricSender 인스턴스 생성
 const metricSender = new FileMetricSender();
 
 // 모니터링 클라이언트 생성
 const client = new monitoring.MetricServiceClient({
-  keyFilename: 'cloud-sentry-386420-ed4d3bd8e36d.json' // .env.keyFilename
+  keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS
 });
 
 // 프로젝트 ID 설정
 const projectId = process.env.GOOGLE_CLOUD_PROJECT_ID;
 
+// container, node filter 로직
+function createFilter(metricType, containerName, nodeName) {
+  if (metricType.startsWith("kubernetes.io/container")) {
+    return `metric.type = "${metricType}" AND resource.labels.container_name = "${containerName}"`;
+  } else if (metricType.startsWith("kubernetes.io/node")) {
+    return `metric.type = "${metricType}" AND resource.labels.node_name = "${nodeName}"`;
+  }
+
+  // 기본값 혹은 에러 처리
+  return null;
+}
+
 //
-async function getMetric(podName, containerName, metricType, retryCount = 0) {
-  // 시간을 보기 좋게 변경예정 new Date().getTime() - 60000, startTime.getTime() + 60000 통일하기
-  const startTime = new Date(new Date().getTime() - 60000); // 현재 시간으로부터 2분(120000 밀리초) 전을 시작 시간으로 설정
-  const endTime = new Date(startTime.getTime() + 60000); // 시작 시간으로부터 1분(60000 밀리초) 후를 종료 시간으로 설정  
+async function getMetric(podName, containerName, nodeName, metricType, retryCount = 0) {
+  const startTime = new Date(new Date().getTime() - 600000); // 현재 시간으로부터 2분(120000 밀리초) 전을 시작 시간으로 설정
+  const endTime = new Date(startTime.getTime() + 60000); // 시작 시간으로부터 1분(60000 밀리초) 후를 종료 시간으로 설정
+
+  let filter = createFilter(metricType, containerName, nodeName);
+  let nameForLog= getMetricNameBasedOnType(metricType, containerName, nodeName);
+
+  // metricType이 문자열인지 확인
+  if (typeof metricType !== 'string') {
+    console.error(`Invalid metricType: ${metricType}, type: ${typeof metricType}`);
+    return;
+  }
 
   const request = {
     name: client.projectPath(projectId),
-    filter: `metric.type = "${metricType}" AND resource.labels.container_name = "${containerName}"`,
+    filter: filter,
     interval: {
       startTime: {
         seconds: Math.floor(startTime.getTime() / 1000),
@@ -32,11 +54,11 @@ async function getMetric(podName, containerName, metricType, retryCount = 0) {
     },
   };
 
-  console.log(`${containerName}에 대한 ${metricType} 메트릭 요청 중`);
+  console.log(`${nameForLog}에 대한 ${metricType} 메트릭 요청 중`);
 
   try {
     const [timeSeries] = await client.listTimeSeries(request);
-    console.log(`${containerName}에 대한 ${metricType} 시계열 데이터 수신`);
+    console.log(`${nameForLog}에 대한 ${metricType} 시계열 데이터 수신`);
 
     let metrics = timeSeries.map(data => {
       return {
@@ -49,23 +71,25 @@ async function getMetric(podName, containerName, metricType, retryCount = 0) {
         }))
       };
     });
-    console.log(`${containerName}에 대한 ${metricType} 메트릭 처리 완료`);
+    console.log(`${nameForLog}에 대한 ${metricType} 메트릭 처리 완료`);
 
     // MetricSender를 사용하여 메트릭 보내기
-    metricSender.send(podName, containerName, metricType, metrics);
+    metricSender.send(podName, containerName, nodeName, metricType, metrics);
 
     return metrics;
-    /** try..catch에서 consle.error containerName만 나오는 문제 해결필요 */
   } catch (error) {
     if (retryCount < 4) {
-      console.log(`${containerName}에 대한 ${metricType} 메트릭 요청 재시도 (${retryCount + 1}번째)`);
+      console.log(`${nameForLog}에 대한 ${metricType} 메트릭 요청 재시도 (${retryCount + 1}번째)`);
       await delay(15000); // 15초 대기
-      return getMetric(podName, containerName, metricType, retryCount + 1);
+      return getMetric(podName, containerName, nodeName, metricType, retryCount + 1);
     } else {
-      /** 어떤 오류인지에 대해 추가 확인 필요 */
-      console.error(`${containerName}에 대한 ${metricType} 메트릭 요청 중 오류 발생: ${error}`);
+      const errorMessage = `${nameForLog}에 대한 ${metricType} 메트릭 요청 중 오류 발생: ${error.message}`;
+      const errorName = `오류 이름: ${error.name}`;
+      const errorStack = `스택 트레이스: ${error.stack}`;
+  
+      console.error(`${errorMessage}\n${errorName}\n${errorStack}`);
     }
   }
 }
 
-module.exports = { getMetric };
+module.exports = { getMetric, getMetricNameBasedOnType };

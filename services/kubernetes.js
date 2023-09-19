@@ -41,13 +41,16 @@ try {
 
 // 노드 이름 가져오기
 async function getNodes() {
-try {
+  try {
     const nodes = await k8sApi.listNode();
+    
+    // 중복된 노드 이름을 제거하기 위해 Set 사용
+    const nodeNames = new Set(nodes.body.items.map(node => node.metadata.name));
 
-    return nodes.body.items.map(node => node.metadata.name);
-} catch (error) {
+    return Array.from(nodeNames);
+  } catch (error) {
     console.error(`Error while getting nodes: ${error}`);
-}
+  }
 }
 
 module.exports = { getContainers, getPods, getNodes };
