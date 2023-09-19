@@ -1,0 +1,1 @@
+{"podName":"ledger-db-0","containerName":"postgres","nodeName":null,"metricType":"kubernetes.io/container/cpu/limit_utilization","metrics":[{"metricType":"kubernetes.io/container/cpu/limit_utilization","metricKind":"GAUGE","valueType":"DOUBLE","values":[{"timestamp":"1695142560","value":0.031943493112036474}]}]}

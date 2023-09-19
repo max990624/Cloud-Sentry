@@ -1,0 +1,1 @@
+{"podName":"contacts-7ddc76d94-bqmht","containerName":"contacts","nodeName":null,"metricType":"kubernetes.io/container/cpu/core_usage_time","metrics":[{"metricType":"kubernetes.io/container/cpu/core_usage_time","metricKind":"CUMULATIVE","valueType":"DOUBLE","values":[{"timestamp":"1695142582","value":5787.271708}]}]}
