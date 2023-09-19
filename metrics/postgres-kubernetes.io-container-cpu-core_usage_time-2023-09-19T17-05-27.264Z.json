@@ -1,0 +1,1 @@
+{"podName":"ledger-db-0","containerName":"postgres","nodeName":null,"metricType":"kubernetes.io/container/cpu/core_usage_time","metrics":[{"metricType":"kubernetes.io/container/cpu/core_usage_time","metricKind":"CUMULATIVE","valueType":"DOUBLE","values":[{"timestamp":"1695142582","value":1938.905759}]}]}

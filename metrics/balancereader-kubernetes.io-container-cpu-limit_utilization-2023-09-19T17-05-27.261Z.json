@@ -1,0 +1,1 @@
+{"podName":"balancereader-7dc7d9ff57-htn28","containerName":"balancereader","nodeName":null,"metricType":"kubernetes.io/container/cpu/limit_utilization","metrics":[{"metricType":"kubernetes.io/container/cpu/limit_utilization","metricKind":"GAUGE","valueType":"DOUBLE","values":[{"timestamp":"1695142560","value":0.028861131941448546}]}]}
