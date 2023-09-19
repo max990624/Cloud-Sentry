@@ -1,0 +1,106 @@
+{
+  "podName": "loadgenerator-6457668dd6-gt2xx",
+  "containerName": "node-exporter",
+  "metricType": "kubernetes.io/container/cpu/core_usage_time",
+  "metrics": [
+    {
+      "metricType": "kubernetes.io/container/cpu/core_usage_time",
+      "metricKind": "CUMULATIVE",
+      "valueType": "DOUBLE",
+      "values": [
+        {
+          "timestamp": "1685933824",
+          "value": 0.09951953
+        }
+      ]
+    },
+    {
+      "metricType": "kubernetes.io/container/cpu/core_usage_time",
+      "metricKind": "CUMULATIVE",
+      "valueType": "DOUBLE",
+      "values": [
+        {
+          "timestamp": "1685933828",
+          "value": 0.095602123
+        }
+      ]
+    },
+    {
+      "metricType": "kubernetes.io/container/cpu/core_usage_time",
+      "metricKind": "CUMULATIVE",
+      "valueType": "DOUBLE",
+      "values": [
+        {
+          "timestamp": "1685933824",
+          "value": 23.120833992
+        }
+      ]
+    },
+    {
+      "metricType": "kubernetes.io/container/cpu/core_usage_time",
+      "metricKind": "CUMULATIVE",
+      "valueType": "DOUBLE",
+      "values": [
+        {
+          "timestamp": "1685933828",
+          "value": 23.021519457
+        }
+      ]
+    },
+    {
+      "metricType": "kubernetes.io/container/cpu/core_usage_time",
+      "metricKind": "CUMULATIVE",
+      "valueType": "DOUBLE",
+      "values": [
+        {
+          "timestamp": "1685933821",
+          "value": 7.92240761
+        }
+      ]
+    },
+    {
+      "metricType": "kubernetes.io/container/cpu/core_usage_time",
+      "metricKind": "CUMULATIVE",
+      "valueType": "DOUBLE",
+      "values": [
+        {
+          "timestamp": "1685933824",
+          "value": 23.161274574
+        }
+      ]
+    },
+    {
+      "metricType": "kubernetes.io/container/cpu/core_usage_time",
+      "metricKind": "CUMULATIVE",
+      "valueType": "DOUBLE",
+      "values": [
+        {
+          "timestamp": "1685933828",
+          "value": 7.569151468
+        }
+      ]
+    },
+    {
+      "metricType": "kubernetes.io/container/cpu/core_usage_time",
+      "metricKind": "CUMULATIVE",
+      "valueType": "DOUBLE",
+      "values": [
+        {
+          "timestamp": "1685933821",
+          "value": 24.027481548
+        }
+      ]
+    },
+    {
+      "metricType": "kubernetes.io/container/cpu/core_usage_time",
+      "metricKind": "CUMULATIVE",
+      "valueType": "DOUBLE",
+      "values": [
+        {
+          "timestamp": "1685933824",
+          "value": 23.366170027
+        }
+      ]
+    }
+  ]
+}

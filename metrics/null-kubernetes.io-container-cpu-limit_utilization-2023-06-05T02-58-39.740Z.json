@@ -1,0 +1,6 @@
+{
+  "podName": "contacts-58cd9c4ddc-6nzdh",
+  "containerName": null,
+  "metricType": "kubernetes.io/container/cpu/limit_utilization",
+  "metrics": []
+}

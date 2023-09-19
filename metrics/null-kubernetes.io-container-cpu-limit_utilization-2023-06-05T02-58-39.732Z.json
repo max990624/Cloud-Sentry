@@ -1,0 +1,6 @@
+{
+  "podName": "frontend-cb4f9cd57-jx89k",
+  "containerName": null,
+  "metricType": "kubernetes.io/container/cpu/limit_utilization",
+  "metrics": []
+}
