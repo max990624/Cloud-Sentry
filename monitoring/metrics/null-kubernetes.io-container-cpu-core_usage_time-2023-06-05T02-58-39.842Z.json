@@ -1,6 +1,0 @@
-{
-  "podName": "userservice-776f7bcf4d-qkqh5",
-  "containerName": null,
-  "metricType": "kubernetes.io/container/cpu/core_usage_time",
-  "metrics": []
-}

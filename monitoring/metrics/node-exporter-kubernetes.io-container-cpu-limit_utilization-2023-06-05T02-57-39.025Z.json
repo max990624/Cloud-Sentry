@@ -1,6 +1,0 @@
-{
-  "podName": "transactionhistory-6bbdf76b66-hz69j",
-  "containerName": "node-exporter",
-  "metricType": "kubernetes.io/container/cpu/limit_utilization",
-  "metrics": []
-}

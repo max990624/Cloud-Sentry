@@ -1,9 +1,10 @@
 class MetricSender {
-  async send(podName, containerName, metricType, metrics) {
+  async send(podName, containerName, nodeName, metricType, metrics) {
     // 전송할 데이터에 팟 이름과 컨테이너 이름 추가
     const data = {
       podName: podName,
       containerName: containerName,
+      nodeName: nodeName,
       metricType: metricType,
       metrics: metrics
     };

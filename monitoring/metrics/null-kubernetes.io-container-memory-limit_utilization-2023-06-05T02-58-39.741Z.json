@@ -1,6 +1,0 @@
-{
-  "podName": "transactionhistory-6bbdf76b66-hz69j",
-  "containerName": null,
-  "metricType": "kubernetes.io/container/memory/limit_utilization",
-  "metrics": []
-}
