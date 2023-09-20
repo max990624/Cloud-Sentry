@@ -1,0 +1,1 @@
+{"podName":"accounts-db-0","containerName":"accounts-db","nodeName":null,"metricType":"kubernetes.io/container/restart_count","metrics":[{"valueType":"INT64","timestamp":"1695223757"},{"valueType":"INT64","timestamp":"1695223697"}]}

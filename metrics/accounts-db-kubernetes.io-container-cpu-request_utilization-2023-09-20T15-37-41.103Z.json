@@ -1,0 +1,1 @@
+{"podName":"accounts-db-0","containerName":"accounts-db","nodeName":null,"metricType":"kubernetes.io/container/cpu/request_utilization","metrics":[{"valueType":"DOUBLE","timestamp":"1695223740","value":0.01976315270462692},{"valueType":"DOUBLE","timestamp":"1695223680","value":0.01780879906429315}]}

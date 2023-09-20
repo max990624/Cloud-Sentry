@@ -1,0 +1,1 @@
+{"podName":"transactionhistory-5dd7c7fd77-7nxtf","containerName":"transactionhistory","nodeName":null,"metricType":"kubernetes.io/container/memory/used_bytes","metrics":[{"valueType":"INT64","timestamp":"1695223762"},{"valueType":"INT64","timestamp":"1695223702"},{"valueType":"INT64","timestamp":"1695223762"},{"valueType":"INT64","timestamp":"1695223702"}]}

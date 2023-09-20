@@ -1,0 +1,1 @@
+{"podName":"balancereader-7dc7d9ff57-htn28","containerName":"balancereader","nodeName":null,"metricType":"kubernetes.io/container/restart_count","metrics":[{"valueType":"INT64","timestamp":"1695223757"},{"valueType":"INT64","timestamp":"1695223697"}]}

@@ -1,0 +1,1 @@
+{"podName":"transactionhistory-5dd7c7fd77-7nxtf","containerName":"transactionhistory","nodeName":null,"metricType":"kubernetes.io/container/cpu/request_utilization","metrics":[{"valueType":"DOUBLE","timestamp":"1695223740","value":0.13662942759022673},{"valueType":"DOUBLE","timestamp":"1695223680","value":0.1342411972332229}]}

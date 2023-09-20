@@ -1,0 +1,1 @@
+{"podName":"loadgenerator-57d4cb57cc-qfg6n","containerName":"loadgenerator","nodeName":null,"metricType":"kubernetes.io/container/cpu/core_usage_time","metrics":[{"valueType":"DOUBLE","timestamp":"1695223760","value":3781.386423},{"valueType":"DOUBLE","timestamp":"1695223700","value":3780.739703}]}
