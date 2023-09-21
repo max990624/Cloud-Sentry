@@ -1,1 +1,0 @@
-{"podName":"contacts-7ddc76d94-bqmht","containerName":"contacts","nodeName":null,"metricType":"kubernetes.io/container/restart_count","metrics":[{"valueType":"INT64","timestamp":"1695223757"},{"valueType":"INT64","timestamp":"1695223697"}]}

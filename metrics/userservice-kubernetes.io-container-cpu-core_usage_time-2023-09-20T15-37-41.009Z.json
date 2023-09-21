@@ -1,1 +1,0 @@
-{"podName":"userservice-cd5ddb4bb-lxh8j","containerName":"userservice","nodeName":null,"metricType":"kubernetes.io/container/cpu/core_usage_time","metrics":[{"valueType":"DOUBLE","timestamp":"1695223760","value":129215.300755},{"valueType":"DOUBLE","timestamp":"1695223700","value":129192.549663}]}

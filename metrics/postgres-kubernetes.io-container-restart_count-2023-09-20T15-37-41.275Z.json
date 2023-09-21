@@ -1,1 +1,0 @@
-{"podName":"ledger-db-0","containerName":"postgres","nodeName":null,"metricType":"kubernetes.io/container/restart_count","metrics":[{"valueType":"INT64","timestamp":"1695223757"},{"valueType":"INT64","timestamp":"1695223697"}]}

@@ -1,1 +1,0 @@
-{"podName":"transactionhistory-5dd7c7fd77-7nxtf","containerName":"transactionhistory","nodeName":null,"metricType":"kubernetes.io/container/cpu/core_usage_time","metrics":[{"valueType":"DOUBLE","timestamp":"1695223762","value":4841.584968},{"valueType":"DOUBLE","timestamp":"1695223702","value":4840.832551}]}

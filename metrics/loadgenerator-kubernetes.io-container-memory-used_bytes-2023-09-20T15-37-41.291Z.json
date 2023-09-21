@@ -1,1 +1,0 @@
-{"podName":"loadgenerator-57d4cb57cc-qfg6n","containerName":"loadgenerator","nodeName":null,"metricType":"kubernetes.io/container/memory/used_bytes","metrics":[{"valueType":"INT64","timestamp":"1695223760"},{"valueType":"INT64","timestamp":"1695223700"},{"valueType":"INT64","timestamp":"1695223760"},{"valueType":"INT64","timestamp":"1695223700"}]}

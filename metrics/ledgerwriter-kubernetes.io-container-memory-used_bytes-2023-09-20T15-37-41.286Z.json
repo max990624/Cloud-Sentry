@@ -1,1 +1,0 @@
-{"podName":"ledgerwriter-f6cc7889d-84b7b","containerName":"ledgerwriter","nodeName":null,"metricType":"kubernetes.io/container/memory/used_bytes","metrics":[{"valueType":"INT64","timestamp":"1695223758"},{"valueType":"INT64","timestamp":"1695223698"},{"valueType":"INT64","timestamp":"1695223758"},{"valueType":"INT64","timestamp":"1695223698"}]}

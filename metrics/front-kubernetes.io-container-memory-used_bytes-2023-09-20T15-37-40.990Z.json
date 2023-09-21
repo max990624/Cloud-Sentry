@@ -1,1 +1,0 @@
-{"podName":"frontend-747b84bff4-v6s5x","containerName":"front","nodeName":null,"metricType":"kubernetes.io/container/memory/used_bytes","metrics":[{"valueType":"INT64","timestamp":"1695223758"},{"valueType":"INT64","timestamp":"1695223698"},{"valueType":"INT64","timestamp":"1695223758"},{"valueType":"INT64","timestamp":"1695223698"}]}

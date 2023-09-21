@@ -1,1 +1,0 @@
-{"podName":"frontend-747b84bff4-v6s5x","containerName":"front","nodeName":null,"metricType":"kubernetes.io/container/cpu/core_usage_time","metrics":[{"valueType":"DOUBLE","timestamp":"1695223758","value":29166.015206},{"valueType":"DOUBLE","timestamp":"1695223698","value":29160.444736}]}

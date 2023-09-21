@@ -1,1 +1,0 @@
-{"podName":"userservice-cd5ddb4bb-lxh8j","containerName":"userservice","nodeName":null,"metricType":"kubernetes.io/container/restart_count","metrics":[{"valueType":"INT64","timestamp":"1695223761"},{"valueType":"INT64","timestamp":"1695223701"}]}

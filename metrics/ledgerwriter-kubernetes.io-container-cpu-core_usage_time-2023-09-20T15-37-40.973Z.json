@@ -1,1 +1,0 @@
-{"podName":"ledgerwriter-f6cc7889d-84b7b","containerName":"ledgerwriter","nodeName":null,"metricType":"kubernetes.io/container/cpu/core_usage_time","metrics":[{"valueType":"DOUBLE","timestamp":"1695223758","value":1996.176373},{"valueType":"DOUBLE","timestamp":"1695223698","value":1995.897839}]}

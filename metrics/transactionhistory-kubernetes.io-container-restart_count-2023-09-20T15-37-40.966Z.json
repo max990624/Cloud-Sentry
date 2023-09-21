@@ -1,1 +1,0 @@
-{"podName":"transactionhistory-5dd7c7fd77-7nxtf","containerName":"transactionhistory","nodeName":null,"metricType":"kubernetes.io/container/restart_count","metrics":[{"valueType":"INT64","timestamp":"1695223757"},{"valueType":"INT64","timestamp":"1695223697"}]}
