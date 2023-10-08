@@ -34,6 +34,10 @@ async function getMetric(podName, containerName, nodeName, metricType, retryCoun
   const startTime = new Date(new Date().getTime() - setStartIntervalTimeInMS); // 현재 시간으로부터 n밀리초 전을 시작 시간으로 설정
   const endTime = new Date(startTime.getTime() + setIntervalTimeInMs); // 시작 시간으로부터 n밀리초 후를 종료 시간으로 설정
 
+  // // 특정 시간대에 대한 메트릭 수집
+  // const startTime = new Date('2023-10-08T12:35:00Z'); 
+  // const endTime = new Date('2023-10-09T12:46:00Z');
+
   let filter = createFilter(metricType, containerName, nodeName);
   let nameForLog= getMetricNameBasedOnType(metricType, containerName, nodeName);
 
