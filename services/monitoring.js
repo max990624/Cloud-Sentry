@@ -73,7 +73,7 @@ async function getMetric(podName, containerName, nodeName, metricType, retryCoun
         metrics.push({
           valueType: data.valueType,
           timestamp: point.interval.endTime.seconds,
-          value: point.value.doubleValue
+          value: point.value.int64Value || point.value.doubleValue
         });
       }
     }
