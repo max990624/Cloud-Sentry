@@ -43,8 +43,8 @@ async function collectAndSendMetrics() {
     ]
     const nodeMetricTypes = [
       // Node metrics
-      "kubernetes.io/node/network/received_bytes_count",
-      "kubernetes.io/node/network/sent_bytes_count"
+      // "kubernetes.io/node/network/received_bytes_count",
+      // "kubernetes.io/node/network/sent_bytes_count"
     ];
 
     // 선택된 MetricSender의 전략을 사용하여 메트릭 보내기
