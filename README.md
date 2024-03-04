@@ -10,3 +10,8 @@ gcloud auth login
 gcloud config set project [YOUR_PROJECT_ID]
 gcloud container clusters get-credentials [YOUR_CLUSTER_NAME] --zone [YOUR_ZONE]
 ```
+
+### pm2 전역 설치
+```
+npm i pm2 -g
+```
