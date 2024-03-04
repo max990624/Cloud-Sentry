@@ -1,0 +1,6 @@
+{
+  "podName": "ledger-db-0",
+  "containerName": null,
+  "metricType": "kubernetes.io/container/memory/limit_utilization",
+  "metrics": []
+}

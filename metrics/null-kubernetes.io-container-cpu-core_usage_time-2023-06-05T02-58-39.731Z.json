@@ -1,0 +1,6 @@
+{
+  "podName": "accounts-db-0",
+  "containerName": null,
+  "metricType": "kubernetes.io/container/cpu/core_usage_time",
+  "metrics": []
+}
