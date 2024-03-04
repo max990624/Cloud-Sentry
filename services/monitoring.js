@@ -29,10 +29,14 @@ function createFilter(metricType, containerName, nodeName) {
 
 //
 async function getMetric(podName, containerName, nodeName, metricType, retryCount = 0) {
-  const setStartIntervalTimeInMS = 600000;
-  const setIntervalTimeInMs = 60000;
+  const setStartIntervalTimeInMS = 2 * 24 * 60 * 60 * 1000; // 2일전
+  const setIntervalTimeInMs = 1 * 24 * 60 * 60 * 1000; // 1일전
   const startTime = new Date(new Date().getTime() - setStartIntervalTimeInMS); // 현재 시간으로부터 n밀리초 전을 시작 시간으로 설정
   const endTime = new Date(startTime.getTime() + setIntervalTimeInMs); // 시작 시간으로부터 n밀리초 후를 종료 시간으로 설정
+
+  // // 특정 시간대에 대한 메트릭 수집
+  // const startTime = new Date('2023-10-08T12:35:00Z'); 
+  // const endTime = new Date('2023-10-09T12:46:00Z');
 
   let filter = createFilter(metricType, containerName, nodeName);
   let nameForLog= getMetricNameBasedOnType(metricType, containerName, nodeName);
@@ -62,17 +66,18 @@ async function getMetric(podName, containerName, nodeName, metricType, retryCoun
     const [timeSeries] = await client.listTimeSeries(request);
     console.log(`${nameForLog}에 대한 ${metricType} 시계열 데이터 수신`);
 
-    let metrics = timeSeries.map(data => {
-      return {
-        metricType: data.metric.type,
-        metricKind: data.metricKind,
-        valueType: data.valueType,
-        values: data.points.map(point => ({
+    let metrics = [];
+    
+    for (let data of timeSeries) {
+      for (let point of data.points) {
+        metrics.push({
+          valueType: data.valueType,
           timestamp: point.interval.endTime.seconds,
-          value: point.value.doubleValue
-        }))
-      };
-    });
+          value: point.value.int64Value || point.value.doubleValue
+        });
+      }
+    }
+
     console.log(`${nameForLog}에 대한 ${metricType} 메트릭 처리 완료`);
 
     // MetricSender를 사용하여 메트릭 보내기

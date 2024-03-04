@@ -1,1 +1,0 @@
-{"podName":null,"containerName":null,"nodeName":"gke-gke-monitoring-default-pool-7b8635b1-60s8","metricType":"kubernetes.io/node/network/received_bytes_count","metrics":[{"metricType":"kubernetes.io/node/network/received_bytes_count","metricKind":"CUMULATIVE","valueType":"INT64","values":[{"timestamp":"1695142578"}]}]}

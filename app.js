@@ -43,8 +43,8 @@ async function collectAndSendMetrics() {
     ]
     const nodeMetricTypes = [
       // Node metrics
-      "kubernetes.io/node/network/received_bytes_count",
-      "kubernetes.io/node/network/sent_bytes_count"
+      // "kubernetes.io/node/network/received_bytes_count",
+      // "kubernetes.io/node/network/sent_bytes_count"
     ];
 
     // 선택된 MetricSender의 전략을 사용하여 메트릭 보내기
@@ -66,7 +66,8 @@ app.get('/metrics', async (req, res) => {
   res.json(metrics);
 });
 
-app.listen(3000, () => {
-  console.log('서버가 포트 3000에서 실행 중입니다.');
+const PORT = process.env.APP_PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`서버가 ${PORT} 포트에서 실행 중입니다.`);
   collectAndSendMetrics(); // 서버가 시작되면 collectAndSendMetrics 함수를 처음 호출합니다.
 });
